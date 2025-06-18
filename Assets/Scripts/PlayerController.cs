@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
         if (hp <= 0){
             Destroy(this.gameObject);
         }
-        tx.text = hp.ToString();
+        tx.text = Math.Round(hp).ToString();
         if (Input.GetKeyDown(KeyCode.Y)){
             hp -= 10;
         }
